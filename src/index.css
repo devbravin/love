@@ -470,11 +470,29 @@
   }
 }
 
+/* Swing Animation for Hanging Photos */
+.animate-swing {
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
 /* Reduced motion for new animations */
 @media (prefers-reduced-motion: reduce) {
   .butterfly-float,
   .heart-drift,
-  .dot-float {
+  .dot-float,
+  .animate-swing {
     animation: none !important;
     opacity: 0.3;
   }

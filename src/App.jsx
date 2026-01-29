@@ -23,6 +23,8 @@ function App() {
     setTimeout(() => {
       setIsUnlocked(true);
       setIsTransitioning(false);
+      // Scroll to top to ensure landing at hero section
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }, 400);
   }, []);
 

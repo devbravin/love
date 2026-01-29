@@ -12,8 +12,8 @@ function Header({ onReset }) {
     { id: 'memories', label: 'MEMORIES' },
     { id: 'timeline', label: 'JOURNEY' },
     { id: 'quotes', label: 'QUOTES' },
-    { id: 'reasons', label: 'REASONS' },
-    { id: 'final', label: 'FINAL' },
+    { id: 'reasons', label: 'CUTE MOMENTS' },
+    { id: 'final', label: 'MESSAGE' },
   ];
 
   return (

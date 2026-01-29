@@ -40,7 +40,7 @@ function Lightbox({ isOpen, onClose, memory }) {
             <span className="text-6xl opacity-40">📷</span>
           </div>
           
-          <h3 className="font-serif text-xl font-medium mb-2" style={{ color: '#8B1538' }}>
+          <h3 className="font-script text-xl font-medium mb-2" style={{ color: '#8B1538' }}>
             {memory.title}
           </h3>
           <p className="text-gray-500 text-sm italic mb-5">

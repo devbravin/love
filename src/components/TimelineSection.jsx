@@ -4,6 +4,22 @@ import { useReveal } from '../hooks/useReveal';
 function TimelineItem({ item, index, isRevealed }) {
   const isEven = index % 2 === 0;
   
+  // Function to render description with Tamil text in italic
+  const renderDescription = (text) => {
+    const parts = text.split(/(\([^)]+\))/g);
+    return parts.map((part, i) => {
+      if (part.match(/\([^)]+\)/)) {
+        // This is Tamil text in parentheses - render in italic
+        return (
+          <span key={i} className="italic font-medium" style={{ color: '#8B1538' }}>
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+  
   return (
     <div 
       className={`relative flex items-start gap-6 md:gap-8 
@@ -24,11 +40,11 @@ function TimelineItem({ item, index, isRevealed }) {
           <span className="text-xs font-medium tracking-wide text-gray-400 uppercase">
             {item.date}
           </span>
-          <h3 className="font-serif text-lg font-medium text-gray-800 mt-1" style={{ color: '#8B1538' }}>
+          <h3 className="font-script text-lg font-medium text-gray-800 mt-1" style={{ color: '#8B1538' }}>
             {item.title}
           </h3>
           <p className="text-gray-500 text-sm leading-relaxed mt-2">
-            {item.description}
+            {renderDescription(item.description)}
           </p>
         </div>
       </div>
@@ -43,12 +59,12 @@ function TimelineSection() {
     <section id="timeline" className="section-padding" style={{ backgroundColor: '#fdfbf9' }}>
       <div className="container-main">
         <div className="text-center mb-12">
-          <h2 className="section-title text-3xl sm:text-4xl font-medium">
-            Our Eternal Journey
+          <h2 className="font-script section-title text-3xl sm:text-4xl font-medium" style={{ color: '#8B1538' }}>
+            Your Beautiful Journey
           </h2>
           <div className="title-underline"></div>
-          <p className="section-subtitle mt-4">
-            From the first glance to forever
+          <p className="section-subtitle mt-4" style={{ color: '#d4526e' }}>
+            Celebrating the love and light you bring to this world
           </p>
         </div>
 

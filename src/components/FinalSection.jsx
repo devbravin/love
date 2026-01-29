@@ -14,10 +14,30 @@ function FinalSection() {
     >
       <div className="container-main">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="section-title text-3xl sm:text-4xl font-medium mb-8">
-            {finalMessage.title}
-          </h2>
-          <div className="title-underline mb-8"></div>
+          {/* Decorative frame with background image */}
+          <div className="relative mx-auto mb-12 max-w-lg">
+            <div 
+              className="relative rounded-2xl overflow-hidden shadow-2xl p-8 sm:p-12"
+              style={{
+                backgroundImage: 'url(/bg.jpeg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                border: '8px solid white',
+                boxShadow: '0 20px 60px rgba(139, 21, 56, 0.3)'
+              }}
+            >
+              <h2 
+                className="font-script text-3xl sm:text-4xl md:text-5xl leading-tight"
+                style={{ 
+                  color: '#8B1538',
+                  fontWeight: '900',
+                  textShadow: '3px 3px 6px rgba(255, 255, 255, 1), -3px -3px 6px rgba(255, 255, 255, 1), 3px -3px 6px rgba(255, 255, 255, 1), -3px 3px 6px rgba(255, 255, 255, 1), 0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.8)'
+                }}
+              >
+                {finalMessage.title}
+              </h2>
+            </div>
+          </div>
           
           <div className="space-y-5 text-gray-600 text-sm sm:text-base leading-relaxed">
             {finalMessage.paragraphs.map((paragraph, index) => (
